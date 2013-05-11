@@ -6,14 +6,12 @@ PHP class to get information about the website visitor (IP, reverse DNS, referer
 Usage
 -----
 
-1) Include file with UserInfo class in your project:
-
+1) Include file with UserInfo class in your project:<br/>
 ```
 require_once('<path_to_folder_which_contain_this_file>/UserInfo.php')
 ```
 
-2) Create UserInfo object:
-
+2) Create UserInfo object:<br/>
 ```
 $UserInfo = new UserInfo();
 ```
@@ -36,3 +34,17 @@ $UserInfo = new UserInfo();
 * $UserInfo->getZipcode() - get Zipcode of visitor
 * $UserInfo->getLatitude() - get Latitude of visitor
 * $UserInfo->getLongitude() - get Logitude of visitor
+
+Requirements
+------------
+
+1) Browscap<br/>
+[http://www.php.net/manual/en/misc.configuration.php#ini.browscap](http://www.php.net/manual/en/misc.configuration.php#ini.browscap)
+
+2) cURL<br/>
+[http://php.net/manual/en/book.curl.php](http://php.net/manual/en/book.curl.php)
+
+Creator
+------------
+[Oleg Koval](http://github.com/olegkoval)<br/>
+[@olegkoval](http://twitter.com/olegkoval)
