@@ -31,7 +31,7 @@ class UserInfo {
         try {
             $this->geoInfo = $this->getGeoInfo();
 
-            if (!is_array()) {
+            if (!is_array($this->geoInfo)) {
                 throw new Exception('We do not got a valid JSON answer from Freegeoip service.', 1);
             }
         }
