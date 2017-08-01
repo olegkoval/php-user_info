@@ -46,7 +46,17 @@ class UserInfo {
      * @return string
      */
     public function getIP() {
-        return $_SERVER['REMOTE_ADDR'];
+        $result = null;
+
+        //for proxy servers
+        if (isset($_SERVER['HTTP_X_FORWARDED_FOR']) && !empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $result = end(array_filter(array_map('trim', explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']))));
+        }
+        else {
+            $result = $_SERVER['REMOTE_ADDR'];
+        }
+
+        return $result;
     }
 
     /**
@@ -54,7 +64,7 @@ class UserInfo {
      * @return string
      */
     public function getReverseDNS() {
-        return gethostbyaddr($_SERVER['REMOTE_ADDR']);
+        return gethostbyaddr($this->getIP());
     }
 
     /**
@@ -233,6 +243,25 @@ class UserInfo {
 
         if (is_array($this->geoInfo) && isset($this->geoInfo['longitude'])) {
             $result = $this->geoInfo['longitude'];
+        }
+
+        return $result;
+    }
+
+    /**
+     * Check if connection was through proxy
+     * @return boolean
+     */
+    public function isProxy() {
+        $result = false;
+
+        //for proxy servers
+        if (isset($_SERVER['HTTP_X_FORWARDED_FOR']) && !empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $addresses = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+
+            if (count($addresses) > 0) {
+                $result = true;
+            }
         }
 
         return $result;

@@ -34,6 +34,7 @@ $UserInfo = new UserInfo();
 * $UserInfo->getZipcode() - get Zipcode of visitor
 * $UserInfo->getLatitude() - get Latitude of visitor
 * $UserInfo->getLongitude() - get Longitude of visitor
+* $UserInfo->isProxy() - check if connection was through proxy
 
 Requirements
 ------------
