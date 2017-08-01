@@ -33,7 +33,7 @@ $UserInfo = new UserInfo();
 * $UserInfo->getCity() - get City of visitor
 * $UserInfo->getZipcode() - get Zipcode of visitor
 * $UserInfo->getLatitude() - get Latitude of visitor
-* $UserInfo->getLongitude() - get Logitude of visitor
+* $UserInfo->getLongitude() - get Longitude of visitor
 
 Requirements
 ------------
