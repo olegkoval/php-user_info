@@ -1,0 +1,19 @@
+{
+    "name": "olegkoval/php-user-info",
+    "type": "library",
+    "description": "Get information about user which visited page of your website",
+    "keywords": ["visitor info","user info", "IP", "reverse DNS", "referer", "OS"],
+    "homepage": "https://github.com/olegkoval/php-user_info",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Oleg Koval",
+            "email": "contact@olegkoval.com",
+            "homepage": "http://olegkoval.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.0.0"
+    }
+}

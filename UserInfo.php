@@ -7,7 +7,7 @@
  * @uses freegeoip http://freegeoip.net
  * @author Oleg Koval <oleh.koval@gmail.com>
  * @copyright Copyright (c) 2013 Oleg Koval -- http://olegkoval.com
- * @version 1.0
+ * @version 1.1
  * @link https://github.com/olegkoval/php-user_info
  */
 
