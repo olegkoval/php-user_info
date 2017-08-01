@@ -3,6 +3,14 @@ php-user_info
 
 PHP class to get information about the website visitor (IP, reverse DNS, referer, OS, etc...)
 
+Installation
+-----------
+
+Use Composer to install the library:<br/>
+```
+composer require olegkoval/php-user-info
+```
+
 Usage
 -----
 
